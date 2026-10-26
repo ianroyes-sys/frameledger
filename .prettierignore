@@ -1,0 +1,18 @@
+node_modules
+.next
+package-lock.json
+playwright-report
+test-results
+coverage
+# Preserve original simulation evidence and adapter snapshots.
+docs/mirofish/**/*.json
+docs/mirofish/diagnostic
+docs/mirofish/pilot
+docs/mirofish/adapter
+docs/screenshots/**/*.json
+
+mobile/FrameLedgerCore/.build
+mobile/build
+mobile/DerivedData
+mobile/.build
+mobile/**/*.xcresult

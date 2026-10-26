@@ -1,0 +1,52 @@
+{
+  "name": "frameledger",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:setup": "node --env-file-if-exists=.env.local scripts/check-setup.mjs",
+    "fees:review": "node --env-file-if-exists=.env.local scripts/fee-policy.mjs",
+    "verify:whop": "node --env-file-if-exists=.env.local scripts/verify-whop.mjs",
+    "check:supabase": "node --env-file-if-exists=.env.local scripts/verify-supabase.mjs",
+    "pretest:e2e": "npm run build",
+    "check:hosted": "node --env-file-if-exists=.env.local scripts/verify-hosted-workspace.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.117.2",
+    "@whop/elements": "^1.1.0",
+    "@whop/elements-react": "^1.1.0",
+    "@whop/sdk": "^2.0.0",
+    "lucide-react": "^1.48.0",
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@electric-sql/pglite": "^0.5.8",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.6",
+    "jsdom": "^30.1.1",
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.2"
+  },
+  "type": "module"
+}

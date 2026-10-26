@@ -1,0 +1,13 @@
+.env*
+.git
+.next
+node_modules
+.vercel
+.fee-policy-audit.jsonl
+playwright-report
+test-results
+coverage
+docs/screenshots
+docs/mirofish
+
+mobile
